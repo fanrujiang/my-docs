@@ -7,6 +7,7 @@ export default sidebar({
     "/docker": "structure",
     "/linux": "structure",
     "/nginx": "structure",
+    "/nodeJS": "structure",
     // "/friends": [
     //     "friends"
     // ]

@@ -49,6 +49,11 @@ highlights:
         icon: nginx
         details: Nginx 是开源、高性能、高可靠的 Web 和反向代理服务器。
         link: ./nginx/
+        
+      - title: nodeJS
+        icon: /img/node.svg
+        details: Node.js是一个基于Chrome V8引擎的JavaScript运行时环境，用于构建高性能、可扩展的网络应用程序。
+        link: ./nodeJS/        
 
 
 copyright: false

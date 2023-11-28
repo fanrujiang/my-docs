@@ -70,6 +70,12 @@ export default navbar([
                 icon: "nginx",
                 link: "/nginx/"
             },
+
+            {
+                text: "nodeJS",
+                icon: "/img/node.svg",
+                link: "/nodeJS/"
+            },
         ]
     },
 
