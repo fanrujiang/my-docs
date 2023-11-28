@@ -1,0 +1,28 @@
+{
+  "name": "vuepress-theme-hope-template",
+  "version": "2.0.0",
+  "description": "A project of vuepress-theme-hope",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "docs:build": "vuepress build src",
+    "docs:clean-dev": "vuepress dev src --clean-cache",
+    "docs:dev": "vuepress dev src",
+    "docs:update-package": "npx vp-update"
+  },
+  "devDependencies": {
+    "@vuepress/client": "2.0.0-rc.0",
+    "@waline/client": "^2.15.8",
+    "aplayer": "^1.10.1",
+    "chart.js": "^4.4.0",
+    "reveal.js": "^5.0.2",
+    "vue": "^3.3.8",
+    "vuepress": "2.0.0-rc.0",
+    "vuepress-plugin-search-pro": "^2.0.0-rc.0",
+    "vuepress-theme-hope": "2.0.0-rc.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.2",
+    "store": "^2.0.12"
+  }
+}
