@@ -5,9 +5,14 @@ const props = defineProps({
 });
 </script>
 
+<!--<template>-->
+<!--  <span class="iconfont icon" :class="`icon-${props.name}`" :spin="props.spin"></span>-->
+<!--</template>-->
+
 <template>
-  <span class="iconfont icon" :class="`icon-${props.name}`" :spin="props.spin"></span>
+  <img src="/img/off.svg" alt="Off" />
 </template>
+
 
 <style lang="scss">
 .icon {

@@ -52,9 +52,9 @@ const UpdateBingImg = () => {
   maskElm.style.background = '';
   maskElm.style.backgroundImage = `url(${bgUrl})`;
 
-  const footerElm = document.querySelector('.vp-footer-wrapper') as HTMLElement;
+  // const footerElm = document.querySelector('.vp-footer-wrapper') as HTMLElement;
 
-  footerElm.style.backgroundImage = `url(${bgUrl})`;
+  // footerElm.style.backgroundImage = `url(${bgUrl})`;
 };
 
 // 更换背景图片
@@ -143,11 +143,11 @@ onMounted(() => {
 });
 </script>
 
-<template>
-  <ClientOnly>
-    <div class="none">Bing壁纸</div>
-  </ClientOnly>
-</template>
+<!--<template>-->
+<!--  <ClientOnly>-->
+<!--    <div class="none">Bing壁纸</div>-->
+<!--  </ClientOnly>-->
+<!--</template>-->
 
 <style lang="scss">
 // 图片切换按钮
@@ -231,25 +231,25 @@ onMounted(() => {
   }
 }
 
-// 底部背景
-.vp-footer-wrapper {
-  position: relative;
-  &::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-  }
-  .vp-copyright,
-  .vp-footer {
-    color: #fff;
-    z-index: 5;
-    opacity: 0.8;
-  }
-}
+//// 底部背景
+//.vp-footer-wrapper {
+//  position: relative;
+//  &::before {
+//    content: '';
+//    position: absolute;
+//    left: 0;
+//    top: 0;
+//    width: 100%;
+//    height: 100%;
+//    z-index: 1;
+//  }
+//  .vp-copyright,
+//  .vp-footer {
+//    color: #fff;
+//    z-index: 5;
+//    opacity: 0.8;
+//  }
+//}
 
 .vp-blog-hero .slide-down-button {
   bottom: 4.75rem;
@@ -271,26 +271,26 @@ onMounted(() => {
   margin-bottom: 1rem;
 }
 
-.vp-footer-wrapper {
-  border-top: none;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-y: top;
-  background-position-x: center;
-  background-attachment: fixed;
-}
+//.vp-footer-wrapper {
+//  border-top: none;
+//  background-repeat: no-repeat;
+//  background-size: cover;
+//  background-position-y: top;
+//  background-position-x: center;
+//  background-attachment: fixed;
+//}
 
 [data-theme='light'] {
   .vp-blog-hero .vp-blog-mask::after {
     background: #000;
     opacity: 0.3 !important;
   }
-  .vp-footer-wrapper {
-    &::before {
-      background: #000;
-      opacity: 0.3;
-    }
-  }
+  //.vp-footer-wrapper {
+  //  &::before {
+  //    background: #000;
+  //    opacity: 0.3;
+  //  }
+  //}
 }
 
 [data-theme='dark'] {
@@ -298,11 +298,11 @@ onMounted(() => {
     background: #000;
     opacity: 0.7 !important;
   }
-  .vp-footer-wrapper {
-    &::before {
-      background: #000;
-      opacity: 0.7;
-    }
-  }
+  //.vp-footer-wrapper {
+  //  &::before {
+  //    background: #000;
+  //    opacity: 0.7;
+  //  }
+  //}
 }
 </style>

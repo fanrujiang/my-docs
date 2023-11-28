@@ -45,7 +45,7 @@ Blog: https://www.fanliu.top/
 
 ### 🔨 技术栈
 
-![img](README/643291fe62647.jpg)
+![img](/img/about.jpg)
 
 1. 熟练使用Spring：IOC(bean对象的注册与依赖的注入)与AOP(5种通知模式),除了事务控制外。封装异步记录操作日志(aop与异步线程)
 2. 熟练使用Mybatis、MybatisPlus: 通用Mapper、通用Service、LambdaQueryWrpper、逻辑删除、分页拦截器、自动填充等框架开发功能。通用单表CRUD功能抽取、多数据源、数据脱敏
@@ -70,7 +70,9 @@ motto: 古今之成大事者，不惟有超世之才，亦必有坚忍不拔之�
 
 ### 💘 关于本站
 
-Hexo 框架 + Butterfly 主题
+由于博客框架从hexo切换到了VuePress后,markdown记录的笔记有一些不兼容,后续会慢慢迁移过来
+
+本博客基于 VuePress 和 vuepress-theme-hope 搭建
 
 博客中的部分图片源于网络，侵删
 

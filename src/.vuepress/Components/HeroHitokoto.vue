@@ -98,7 +98,7 @@ const GetWord = (path?) => {
   }
 
   // if (toPath == '/' || toPath == '/en/') {
-  if (toPath == '/') {
+  if (toPath == '/blog/') {
     axios({
       method: 'get',
       url: 'https://v1.hitokoto.cn',
@@ -123,11 +123,11 @@ onMounted(() => {
 });
 </script>
 
-<template>
-  <ClientOnly>
-    <div class="none">一言插件</div>
-  </ClientOnly>
-</template>
+<!--<template>-->
+<!--  <ClientOnly>-->
+<!--    <div class="none">一言插件</div>-->
+<!--  </ClientOnly>-->
+<!--</template>-->
 
 <style lang="scss">
 // 一言

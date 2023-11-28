@@ -150,6 +150,21 @@ onMounted(() => {
 });
 </script>
 
+<!--<template>-->
+<!--  <ClientOnly>-->
+<!--    <div class="MyMusic">-->
+<!--      <div class="MyMusic_Play" :class="{ hide: !IsShow }">-->
+<!--        <div class="close" @click="CloseStatus">-->
+<!--          &lt;!&ndash; 使用 guanbi.svg 图标 &ndash;&gt;-->
+<!--          <img src="/img/off.svg" alt="关闭按钮" />-->
+<!--        </div>-->
+<!--        <div id="GlobalAPlayer"></div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </ClientOnly>-->
+<!--</template>-->
+
+
 <template>
   <ClientOnly>
     <div class="MyMusic">
@@ -236,7 +251,7 @@ onMounted(() => {
   height: 1.6rem;
   width: 1.6rem;
   .btnImg {
-    background-image: url('/img/playBtn.webp');
+    background-image: url('/img/music.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
