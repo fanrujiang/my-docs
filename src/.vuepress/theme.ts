@@ -44,7 +44,7 @@ export default hopeTheme({
     },
 
     blog: {
-        description: "good good study，day day up",
+        description: "过去无可挽回,未来可以改变",
         intro: "/intro.html",
         medias: {
             // Baidu: "https://example.com",
@@ -58,7 +58,7 @@ export default hopeTheme({
             // Facebook: "https://example.com",
             // Flipboard: "https://example.com",
             // Gitee: "https://example.com",
-            // GitHub: "https://example.com",
+            GitHub: "https://github.com/fanrujiang",
             // Gitlab: "https://example.com",
             // Gmail: "mailto:info@example.com",
             // Instagram: "https://example.com",

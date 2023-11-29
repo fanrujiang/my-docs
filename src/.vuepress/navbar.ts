@@ -90,6 +90,12 @@ export default navbar([
             },
 
             {
+                text: "游戏",
+                icon: "/img/game.svg",
+                link: "/other/game/",
+            },
+
+            {
                 text: "足迹",
                 icon: "/img/lvXing.svg",
                 link: "/other/world/",

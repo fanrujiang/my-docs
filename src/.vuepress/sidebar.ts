@@ -8,6 +8,7 @@ export default sidebar({
     "/linux": "structure",
     "/nginx": "structure",
     "/nodeJS": "structure",
+    "/other/game": "structure",
     "/about":[
         "intro",
         "me",

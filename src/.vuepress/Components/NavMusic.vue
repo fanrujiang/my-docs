@@ -117,11 +117,20 @@ onMounted(() => {
 
   axios({
     method: 'get',
-    url: '//file.mo7.cc/music/list.json',
+    // url: '//file.mo7.cc/music/list.json',
+    url: 'https://api2.52jan.com/music/songlist?server=qqmusic&id=2702974802',
     params: {},
   }).then((response) => {
     var listData = response.data;
     if (listData && listData.length > 0) {
+
+      listData.forEach((item) => {
+        if (item.hasOwnProperty('title')) {
+          // 将键名 "title" 修改为 "name"
+          item.name = item.title;
+          delete item.title; // 删除原来的 "title" 键
+        }
+      });
       GlobalMusicList = listData;
     }
   });
