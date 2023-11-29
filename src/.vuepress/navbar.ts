@@ -93,20 +93,14 @@ export default navbar([
                 text: "足迹",
                 icon: "/img/lvXing.svg",
                 link: "/other/world/",
-            },
-
-            {
-                text: "友链",
-                icon: "/assets/icon/friend.svg",
-                link: "/other/friends/",
-            },
+            }
         ]
     },
 
     {
         text: "关于",
         icon: "/assets/icon/about-me.svg",
-        link: "/intro/",
+        link: "/about/",
     },
 
 ]);

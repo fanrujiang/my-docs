@@ -1,9 +1,10 @@
 ---
 title: 友链页
-icon: splotch
+order: 4
+icon: /assets/icon/friend.svg
 # 是否显示在文章列表中
 article: false
-sidebar: false
+#sidebar: false
 
 
 blog:

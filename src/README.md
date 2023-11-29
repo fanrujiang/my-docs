@@ -17,7 +17,7 @@ actions:
 
   - text: 关于作者
     icon: /assets/icon/about-me.svg
-    link: ./intro/
+    link: ./about/me/
 
 highlights:      
   - header: 

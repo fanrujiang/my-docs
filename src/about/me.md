@@ -1,7 +1,8 @@
 ---
 # 这是文章的标题
 title: 关于作者
-icon: /assets/icon/about-me.svg
+order: 2
+icon: info
 # 你可以自定义封面图片
 #cover: /assets/images/cover3.jpg
 # 这是页面的图标
@@ -11,7 +12,6 @@ icon: /assets/icon/about-me.svg
 # 设置作者
 #author: fanfan
 # 设置写作时间
-date: 2021-01-01
 # 一个页面可以有多个分类
 #category:
 #  - 使用指南
@@ -24,7 +24,6 @@ sticky: false
 # 此页面会出现在文章收藏中
 star: false
 # 你可以自定义页脚
-footer: 这是测试显示的页脚
 # 你可以自定义版权信息
 #copyright: 无版权
 index: false
@@ -41,7 +40,6 @@ Address: XiaMen
 Github: https://github.com/fanrujiang
 Blog: https://www.fanliu.top/
 ```
-
 
 ### 🔨 技术栈
 
@@ -65,26 +63,3 @@ qq: 1066643487
 vx: fan1066643487（加我请留下备注，无备注不会审核通过哈，望理解）
 email: 1066643487@qq.com
 motto: 古今之成大事者，不惟有超世之才，亦必有坚忍不拔之志。
-
-
-
-### 💘 关于本站
-
-由于博客框架从hexo切换到了VuePress后,markdown记录的笔记有一些不兼容,后续会慢慢迁移过来
-
-本博客基于 VuePress 和 vuepress-theme-hope 搭建
-
-博客中的部分图片源于网络，侵删
-
-本博客文章采用 CC BY-NC-SA 4.0 协议，转载请注明出处
-
-欢迎小伙伴们交换友链，具体说明可在 友链页 查看。
-
-
-
-### 🙋 免责声明
-
-本站以分享互联网经验、学习知识为目的，所有文章所涉及使用的工具、资源等均来自互联网， 仅供学习和研究使用，版权归作者所有，如果无意之中侵犯了您的版权，请来信告知。本站将在第一时间删除！另外， 本站内的文章多为博主原创，大部分是由CSDN平台搬迁过来，仅供学习交流之用，不参与商业用途。
-
-遵守相关法律法规，由于本站资源部分来源于网络，开发也是使用开源模板，故无法核实资源侵权的真实性，无论出于何种目的要求本站删除内容，“您”均需要提供相关证明，否则不予处理。
-

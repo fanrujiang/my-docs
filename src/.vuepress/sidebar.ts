@@ -8,8 +8,11 @@ export default sidebar({
     "/linux": "structure",
     "/nginx": "structure",
     "/nodeJS": "structure",
-    // "/friends": [
-    //     "friends"
-    // ]
+    "/about":[
+        "intro",
+        "me",
+        "guestbook",
+        "friends"
+    ]
 
 });
