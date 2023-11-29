@@ -41,6 +41,56 @@ Github: https://github.com/fanrujiang
 Blog: https://www.fanliu.top/
 ```
 
+
+
+### :wave:编程能力
+
+::: chart 
+
+```json
+{
+  "type": "radar",
+  "data": {
+    "labels": ["java", "Spring", "SpringCloud", "vue", "js", "docker", "Python"],
+    "datasets": [
+      {
+        "label": "me",
+        "data": [80, 75, 70, 50, 50, 85, 20],
+        "fill": true,
+        "backgroundColor": "rgba(255, 99, 132, 0.2)",
+        "borderColor": "rgb(255, 99, 132)",
+        "pointBackgroundColor": "rgb(255, 99, 132)",
+        "pointBorderColor": "#fff",
+        "pointHoverBackgroundColor": "#fff",
+        "pointHoverBorderColor": "rgb(255, 99, 132)"
+      },
+      {
+        "label": "基准",
+        "data": [0, 0, 0, 0, 0, 0, 0],
+        "fill": true,
+        "backgroundColor": "rgba(54, 162, 235, 0.2)",
+        "borderColor": "rgb(54, 162, 235)",
+        "pointBackgroundColor": "rgb(54, 162, 235)",
+        "pointBorderColor": "#fff",
+        "pointHoverBackgroundColor": "#fff",
+        "pointHoverBorderColor": "rgb(54, 162, 235)"
+      }  
+    ]
+  },
+  "options": {
+    "elements": {
+      "line": {
+        "borderWidth": 3
+      }
+    }
+  }
+}
+```
+
+:::
+
+
+
 ### 🔨 技术栈
 
 ![img](/img/about.jpg)
@@ -54,6 +104,9 @@ Blog: https://www.fanliu.top/
 7. 熟练使用RabbitMQ: 5种消息模式，消息可靠性处理、消息幂等处理、了解死信、消息堆积解决方案、延迟消息
 8. 了解HashMap的底层原理
 9. 熟练Docker使用: 镜像、容器、数据卷操作。了解dockerfile项目打包成镜像、docker-compose容器编排
+10. 熟练管理Linux服务器,各种项目部署,域名ssl证书配置,缓存优化,预防ddos攻击
+11. 熟悉html,js,vue3,layUI  编写后台管理台页面
+12. 具备`全栈开发 `和 `运维` 的能力
 
 
 
