@@ -33,6 +33,12 @@ blog:
     logo: https://viper3-1318672778.cos.ap-beijing.myqcloud.com/user/DeftCup.jpg
     url: https://viper3.top/
     preview: https://viper3-1318672778.cos.ap-beijing.myqcloud.com/wallpaper/sunsetglow.jpg
+    
+  - name: 许大阳的日记本
+    desc: 潇洒不是洒脱，自由但是有度
+    logo: https://imxcy.cn/img/647.jpeg
+    url: https://imxcy.cn/
+    preview: /img/null.png
 
 ---
 
