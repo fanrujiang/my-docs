@@ -53,7 +53,12 @@ highlights:
       - title: nodeJS
         icon: /img/node.svg
         details: Node.js是一个基于Chrome V8引擎的JavaScript运行时环境，用于构建高性能、可扩展的网络应用程序。
-        link: ./nodeJS/        
+        link: ./nodeJS/
+        
+      - title: Elasticsearch
+        icon: /img/es.svg
+        details: Elasticsearch是一个开源的分布式搜索和分析引擎，用于快速搜索、分析和可视化大规模数据。
+        link: ./Elasticsearch/
 
 
 copyright: false

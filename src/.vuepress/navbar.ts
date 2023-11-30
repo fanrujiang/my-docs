@@ -76,6 +76,12 @@ export default navbar([
                 icon: "/img/node.svg",
                 link: "/nodeJS/"
             },
+
+            {
+                text: "ES",
+                icon: "/img/es.svg",
+                link: "/Elasticsearch/"
+            },
         ]
     },
 
