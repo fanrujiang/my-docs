@@ -21,6 +21,24 @@ blog:
     logo: https://thirdqq.qlogo.cn/g?b=qq&nk=2144693292&s=100
     url: https://blog.lwgzs.cn
     preview: assets/image/77.png
+    
+  - name: 刑辩人在路上
+    desc: 刑辩人在路上
+    logo: https://xingbianren.cn/zb_users/upload/2023/05/202305231684818873372207.png
+    url: https://xingbianren.cn
+    preview: https://xingbianren.cn/zb_users/upload/2023/06/202306021685717413207375.jpg
+    
+  - name: Viper3の小破站
+    desc: 时空是个圆圈 我们终会相见
+    logo: https://viper3-1318672778.cos.ap-beijing.myqcloud.com/user/DeftCup.jpg
+    url: https://viper3.top/
+    preview: https://viper3-1318672778.cos.ap-beijing.myqcloud.com/wallpaper/sunsetglow.jpg
+    
+  - name: 许大阳的日记本
+    desc: 潇洒不是洒脱，自由但是有度
+    logo: https://imxcy.cn/img/647.jpeg
+    url: https://imxcy.cn/
+    preview: /img/null.png
 
 ---
 
