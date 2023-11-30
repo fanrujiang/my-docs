@@ -21,6 +21,12 @@ blog:
     logo: https://thirdqq.qlogo.cn/g?b=qq&nk=2144693292&s=100
     url: https://blog.lwgzs.cn
     preview: assets/image/77.png
+    
+  - name: 刑辩人在路上
+    desc: 刑辩人在路上
+    logo: https://xingbianren.cn/zb_users/upload/2023/05/202305231684818873372207.png
+    url: https://xingbianren.cn
+    preview: https://xingbianren.cn/zb_users/upload/2023/06/202306021685717413207375.jpg
 
 ---
 
