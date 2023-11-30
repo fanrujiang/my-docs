@@ -27,6 +27,12 @@ blog:
     logo: https://xingbianren.cn/zb_users/upload/2023/05/202305231684818873372207.png
     url: https://xingbianren.cn
     preview: https://xingbianren.cn/zb_users/upload/2023/06/202306021685717413207375.jpg
+    
+  - name: Viper3の小破站
+    desc: 时空是个圆圈 我们终会相见
+    logo: https://viper3-1318672778.cos.ap-beijing.myqcloud.com/user/DeftCup.jpg
+    url: https://viper3.top/
+    preview: https://viper3-1318672778.cos.ap-beijing.myqcloud.com/wallpaper/sunsetglow.jpg
 
 ---
 
