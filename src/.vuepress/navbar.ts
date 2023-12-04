@@ -88,6 +88,11 @@ export default navbar([
                 icon: "/img/rabbitmq.svg",
                 link: "/mq/rabbitMQ/"
             },
+            {
+                text: "Spring",
+                icon: "/img/spring.svg",
+                link: "/spring/"
+            },
         ]
     },
 

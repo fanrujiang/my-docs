@@ -25,6 +25,11 @@ highlights:
     bgImage: https://theme-hope-assets.vuejs.press/bg/10-light.svg
     bgImageDark: https://theme-hope-assets.vuejs.press/bg/10-dark.svg
     features:
+      - title: Spring
+        icon: /img/spring.svg
+        details: Spring 是一个开源的轻量级应用开发框架，提供全面的基础设施支持和丰富的特性，简化开发并提高代码的可测试性和可维护性。
+        link: ./spring/      
+
       - title: AJAX
         icon: ajax
         details: Ajax是前端技术，可在不刷新页面的情况下与服务器交换数据，提高用户体验。

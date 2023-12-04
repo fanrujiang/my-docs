@@ -11,6 +11,7 @@ export default sidebar({
     "/Elasticsearch": "structure",
     "/mq/rabbitMQ": "structure",
     "/other/game": "structure",
+    "/spring":"structure",
     "/about":[
         "intro",
         "me",
