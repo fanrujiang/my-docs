@@ -9,6 +9,7 @@ export default sidebar({
     "/nginx": "structure",
     "/nodeJS": "structure",
     "/Elasticsearch": "structure",
+    "/mq/rabbitMQ": "structure",
     "/other/game": "structure",
     "/about":[
         "intro",

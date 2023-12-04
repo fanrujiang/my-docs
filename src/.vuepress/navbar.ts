@@ -82,6 +82,12 @@ export default navbar([
                 icon: "/img/es.svg",
                 link: "/Elasticsearch/"
             },
+
+            {
+                text: "RabbitMQ",
+                icon: "/img/rabbitmq.svg",
+                link: "/mq/rabbitMQ/"
+            },
         ]
     },
 

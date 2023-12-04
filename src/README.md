@@ -59,6 +59,11 @@ highlights:
         icon: /img/es.svg
         details: Elasticsearch是一个开源的分布式搜索和分析引擎，用于快速搜索、分析和可视化大规模数据。
         link: ./Elasticsearch/
+        
+      - title: RabbitMQ
+        icon: /img/rabbitmq.svg
+        details: RabbitMQ是一款使用Erlang语言开发的的开源消息中间件，，用于在分布式系统中存储转发消息。
+        link: ./mq/rabbitMQ/
 
 
 copyright: false

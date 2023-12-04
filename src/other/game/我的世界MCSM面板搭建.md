@@ -1,7 +1,7 @@
 ---
 title: 我的世界MCSM面板搭建
 date: 2021-2-07 16:06:18
-tags: Minecraft
+tag: Minecraft
 categories:
 - 游戏
 - 我的世界
