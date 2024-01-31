@@ -16,7 +16,8 @@ export default sidebar({
         "intro",
         "me",
         "guestbook",
-        "friends"
+        "friends",
+        "chinese-copywriting-guidelines"
     ]
 
 });
