@@ -12,6 +12,7 @@ export default sidebar({
     "/mq/rabbitMQ": "structure",
     "/other/game": "structure",
     "/spring":"structure",
+    "/db":"structure",
     "/about":[
         "intro",
         "me",

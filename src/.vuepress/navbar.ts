@@ -93,6 +93,11 @@ export default navbar([
                 icon: "/img/spring.svg",
                 link: "/spring/"
             },
+            {
+                text: "数据库",
+                icon: "/img/mysql.svg",
+                link: "/db/"
+            },
         ]
     },
 
