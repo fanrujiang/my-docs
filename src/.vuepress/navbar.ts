@@ -42,6 +42,11 @@ export default navbar([
         icon: "/img/book.svg",
         children: [
             {
+                text: "源码解读",
+                icon: "/img/code.svg",
+                link: "/CodeInterpretation/"
+            },
+            {
                 text: "AJAX",
                 icon: "ajax",
                 link: "/ajax/"

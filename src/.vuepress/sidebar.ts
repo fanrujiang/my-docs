@@ -13,6 +13,7 @@ export default sidebar({
     "/other/game": "structure",
     "/spring":"structure",
     "/db":"structure",
+    "/CodeInterpretation":"structure",
     "/about":[
         "intro",
         "me",
