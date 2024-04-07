@@ -1,6 +1,7 @@
 import {hopeTheme} from "vuepress-theme-hope";
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
+
 export default hopeTheme({
     fullscreen: true,
     hostname: "https://www.fanliu.top",
@@ -82,7 +83,6 @@ export default hopeTheme({
     },
 
 
-
     plugins: {
         // autoCatalog: false,
         components: {
@@ -92,8 +92,10 @@ export default hopeTheme({
                 "Badge",
             ]
         },
-        feed:{
-          json: true,
+        feed: {
+            json: true,
+            atom: true,
+            rss: true,
         },
 
         blog: {
@@ -186,7 +188,6 @@ export default hopeTheme({
             // install @vue/repl before enabling it
             // vuePlayground: true,
         },
-
 
 
         // uncomment these if you want a pwa
