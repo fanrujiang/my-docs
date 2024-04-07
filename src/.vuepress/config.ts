@@ -11,7 +11,7 @@ export default defineUserConfig({
 
   lang: "zh-CN",
   title: "FanFanの学习笔记",
-  description: "小范同学",
+  description: "fanfan",
 
   theme,
 

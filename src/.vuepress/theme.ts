@@ -92,6 +92,9 @@ export default hopeTheme({
                 "Badge",
             ]
         },
+        feed:{
+          json: true,
+        },
 
         blog: {
             excerptLength: 0,
