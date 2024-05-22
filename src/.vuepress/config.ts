@@ -1,6 +1,7 @@
 import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
 import {searchProPlugin} from "vuepress-plugin-search-pro";
+import baiduAutoPushPlugin from 'vuepress-plugin-baidu-autopush';
 
 // import { commentPlugin } from "vuepress-plugin-comment2";
 
@@ -18,6 +19,7 @@ export default defineUserConfig({
 
 
   plugins: [
+    baiduAutoPushPlugin(),
 
     searchProPlugin({
       // 索引全部内容

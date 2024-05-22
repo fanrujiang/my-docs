@@ -22,7 +22,10 @@
     "vuepress-theme-hope": "2.0.0-rc.0"
   },
   "dependencies": {
+    "@vue/component-compiler-utils": "^3.3.0",
+    "@vuepress/shared-utils": "^1.9.10",
     "axios": "^1.6.2",
-    "store": "^2.0.12"
+    "store": "^2.0.12",
+    "vuepress-plugin-baidu-autopush": "^1.0.1"
   }
 }
