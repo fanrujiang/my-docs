@@ -5,6 +5,10 @@ tags:
 - 技术分享
 categories:
 - 技术分享
+head:
+  - - meta
+    - name: keywords
+      content: 一键登录
 ---
 
 

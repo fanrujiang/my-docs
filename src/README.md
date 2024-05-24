@@ -9,6 +9,10 @@ bgImageStyle:
   background-attachment: fixed
 heroText: FanFanの学习笔记
 tagline: 业精于勤，荒于嬉；行成于思，毁于随。
+head:
+  - - meta
+    - name: keywords
+      content: fanfan
 actions:
   - text: 进入博客
     icon: /assets/icon/blog.svg
