@@ -8,7 +8,6 @@ tags:
 categories:
 - docker
 - log
-cover: https://gimg3.baidu.com/topone/src=https%3A%2F%2Fbkimg.cdn.bcebos.com%2Fsmart%2Ff703738da977391281957edbf0198618377ae2dd-bkimg-process%2Cv_1%2Crw_1%2Crh_1%2Cmaxl_800%2Cpad_1%3Fx-bce-process%3Dimage%2Fresize%2Cm_pad%2Cw_348%2Ch_348%2Ccolor_ffffff&refer=http%3A%2F%2Fwww.baidu.com&app=2011&size=w931&n=0&g=0n&er=404&q=75&fmt=auto&maxorilen2heic=2000000?sec=1719075600&t=f89bdb551bf657b74df09432a371eda2
 ---
 
 ## 带你深入了解 Docker 日志
