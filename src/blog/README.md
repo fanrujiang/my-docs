@@ -2,7 +2,7 @@
 home: true
 layout: Blog
 hero: true
-bgImage: /blog_background.jpg
+bgImage: /blog_background1.jpg
 heroFullScreen: true
 tagline: 过去无可挽回,未来可以改变
 projects:
