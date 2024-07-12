@@ -47,6 +47,11 @@ export default navbar([
                 link: "/CodeInterpretation/"
             },
             {
+                text: "JavaScript",
+                icon: "JavaScript",
+                link: "/JavaScript/"
+            },
+            {
                 text: "AJAX",
                 icon: "ajax",
                 link: "/ajax/"
