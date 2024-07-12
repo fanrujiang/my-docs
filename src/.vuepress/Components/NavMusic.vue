@@ -117,7 +117,7 @@ onMounted(() => {
 
   axios({
     method: 'get',
-    url: '//file.mo7.cc/music/list.json',
+    url: '//file.fanliu.top/music/list.json',
     // url: 'https://api2.52jan.com/music/songlist?server=qqmusic&id=2702974802',
     // url: 'https://api.i-meto.com/meting/api?server=tencent&type=playlist&id=2702974802',
     params: {},
