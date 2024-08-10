@@ -118,7 +118,13 @@ export default navbar([
             {
                 text: "杂记",
                 icon: "/img/book.svg",
-                link: "/other/life/",
+                link: "/other/node/",
+            },
+
+            {
+                text: "足迹",
+                icon: "/img/lvXing.svg",
+                link: "/other/world/",
             },
 
             {
@@ -128,9 +134,9 @@ export default navbar([
             },
 
             {
-                text: "足迹",
+                text: "工具",
                 icon: "/img/lvXing.svg",
-                link: "/other/world/",
+                link: "/other/tool/",
             }
         ]
     },

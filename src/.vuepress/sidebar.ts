@@ -1,7 +1,6 @@
 import {sidebar} from "vuepress-theme-hope";
 
 export default sidebar({
-
     "/ajax": "structure",
     "/javaSE": "structure",
     "/docker": "structure",
@@ -10,12 +9,12 @@ export default sidebar({
     "/nodeJS": "structure",
     "/Elasticsearch": "structure",
     "/mq/rabbitMQ": "structure",
-    "/other/game": "structure",
     "/spring":"structure",
     "/db":"structure",
     "/art":"structure",
     "/CodeInterpretation":"structure",
     "/JavaScript":"structure",
+    "/other":"structure",
     "/about":[
         "intro",
         "me",
