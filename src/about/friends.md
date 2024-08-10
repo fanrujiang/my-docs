@@ -40,12 +40,6 @@ blog:
     url: https://imxcy.cn/
     preview: /img/null.png
 
-  - name: 夏夜小鹿
-    desc: 夏夜小鹿，是夏，也是露。
-    logo: https://img.xiayexiaolu.top/images/2024/03/18/xiayexiaolu.jpg
-    url: https://blog.xiayexiaolu.top/
-    preview: /img/null.png  
-
 ---
 
 <SiteInfo
