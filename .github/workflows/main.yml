@@ -1,40 +1,57 @@
-# 当前工作流的名称1
 name: sub-web-deploy
 on:
   push:
     branches:
       - master
 
-jobs: # 构建的任务
+jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest # 在什么服务器上执行这些任务，这里使用最新版本的Ubuntu系统
+    runs-on: ubuntu-latest
     
-    steps: # 构建任务的步骤，一个任务可分为多个步骤
-      # 步骤1 切换分支
+    steps:
+      # 步骤1: 检出代码
       - name: Checkout
         uses: actions/checkout@v4
-      # 步骤2 安装Node.js
-      - name: use node
-        uses: actions/setup-node@v3.8.1
+
+      # 步骤2: 设置 Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
           node-version: 18
-      # 步骤3 下载项目依赖    
-      - name: install
-        run: npm install
-      # 步骤4 打包Node.js项目
-      - name: build
-        run: npm run docs:build
-      # 步骤5 部署项目到服务器
-      - name: ssh deploy
-        uses: easingthemes/ssh-deploy@v4.1.10
+
+      # 步骤3: 缓存 npm 依赖
+      - name: Cache Node.js modules
+        uses: actions/cache@v3
         with:
-          # SSH密钥的私钥部分
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      # 步骤4: 安装项目依赖
+      - name: Install dependencies
+        run: npm install
+
+      # 步骤5: 构建项目
+      - name: Build project
+        run: npm run docs:build
+
+      # 步骤6: 删除远程目录
+      - name: Remove old files on remote server
+        uses: appleboy/ssh-action@v0.1.8
+        with:
+          host: ${{ secrets.REMOTE_HOST }}
+          username: ${{ secrets.REMOTE_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            rm -rf /www/wwwroot/www.fanliu.top/dist/
+
+      # 步骤7: 部署项目
+      - name: Deploy via SSH
+        uses: easingthemes/ssh-deploy@v4
+        with:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          # 远程主机地址
-          REMOTE_HOST: ${{ secrets.SSH_KNOWN_HOSTS }}
-          # 远程主机用户名
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          # 源目录，相对于 `$GITHUB_WORKSPACE` 的根路径，例如：`dist/`
           SOURCE: "/src/.vuepress/dist/"
-          # 目标目录
-          TARGET: "/www/wwwroot/www.fanliu.top/"
+          TARGET: "/www/wwwroot/www.fanliu.top/dist/"
