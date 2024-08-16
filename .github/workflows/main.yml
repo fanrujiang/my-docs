@@ -35,18 +35,12 @@ jobs:
       # 步骤5: 构建项目
       - name: Build project
         run: npm run docs:build
-
-      # 步骤6: 删除远程目录并部署项目
-      - name: Delete remote directory and deploy
+      # 步骤7: 部署项目
+      - name: Deploy via SSH
         uses: easingthemes/ssh-deploy@v4
         with:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          SCRIPT: |
-            # 删除旧的目录
-            rm -rf /www/wwwroot/www.fanliu.top/dist/
-            # 创建新的目标目录
-            mkdir -p /www/wwwroot/www.fanliu.top/dist/
-            # 将构建的文件部署到目标目录
-            rsync -avz --delete /src/.vuepress/dist/ $REMOTE_USER@$REMOTE_HOST:/www/wwwroot/www.fanliu.top/dist/
+          SOURCE: "/src/.vuepress/dist/"
+          TARGET: "/www/wwwroot/www.fanliu.top/dist/"
