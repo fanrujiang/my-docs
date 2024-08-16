@@ -21,10 +21,10 @@ jobs: # 构建的任务，一个工作流可以有多个构建任务
           cache: "yarn"
       # 步骤3 下载项目依赖    
       - name: install
-        run: yarn install
+        run: npm install
       # 步骤4 打包Node.js项目
       - name: build
-        run: yarn build
+        run: npm build
       # 步骤5 部署项目到服务器
       - name: ssh deploy
         uses: easingthemes/ssh-deploy@v4.1.10
