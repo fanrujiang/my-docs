@@ -47,4 +47,4 @@ jobs: # 构建的任务
           BRANCH: pages
           FOLDER: /src/.vuepress/dist/
           SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
-          KNOWN_HOSTS_FILE: /
+          KNOWN_HOSTS_FILE: resources/known_hosts
