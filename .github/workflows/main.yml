@@ -52,8 +52,9 @@ jobs: # 构建的任务
       # 步骤8 将打包后的文件复制到 pages 分支
       - name: Copy files to GitHub Pages repository
         run: |
-          find fanrujiang.github.io -mindepth 1 -not -path 'fanrujiang.github.io/.git/*' -exec rm -rf {} +
-          cp -r src/.vuepress/dist/* fanrujiang.github.io/
+          cd fanrujiang.github.io
+          find . -mindepth 1 ! -regex '^./\.git\(/.*\)?' -delete
+          cp -r ../src/.vuepress/dist/* .
 
       # 步骤9 提交并推送到 pages 分支
       - name: Commit and Push changes
