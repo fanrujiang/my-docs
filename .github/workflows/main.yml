@@ -45,5 +45,5 @@ jobs: # 构建的任务
         env:
           REPO: git@github.com:fanrujiang/fanrujiang.github.io.git
           BRANCH: pages
-          FOLDER: /src/.vuepress/dist/
+          FOLDER: src/.vuepress/dist/
           SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
