@@ -38,3 +38,31 @@ jobs: # 构建的任务
           SOURCE: "/src/.vuepress/dist/"
           # 目标目录
           TARGET: "/www/wwwroot/www.fanliu.top/dist/"
+
+      # 步骤6 克隆 fanrujiang.github.io 仓库
+      - name: Clone GitHub Pages Repository
+        run: git clone https://github.com/fanrujiang/fanrujiang.github.io.git
+
+      # 步骤7 切换到 pages 分支
+      - name: Switch to pages branch
+        run: |
+          cd fanrujiang.github.io
+          git checkout pages
+
+      # 步骤8 将打包后的文件复制到 pages 分支
+      - name: Copy files to GitHub Pages repository
+        run: |
+          find fanrujiang.github.io -mindepth 1 -not -path 'fanrujiang.github.io/.git/*' -exec rm -rf {} +
+          cp -r src/.vuepress/dist/* fanrujiang.github.io/
+
+      # 步骤9 提交并推送到 pages 分支
+      - name: Commit and Push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd fanrujiang.github.io
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add .
+          git commit -m "Deploy updates to GitHub Pages"
+          git push origin pages
