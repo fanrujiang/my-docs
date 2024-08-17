@@ -47,3 +47,4 @@ jobs: # 构建的任务
           BRANCH: pages
           FOLDER: src/.vuepress/dist/
           SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
+          SQUASH_HISTORY: true
