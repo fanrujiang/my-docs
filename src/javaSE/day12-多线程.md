@@ -1,6 +1,7 @@
 ---
 title: day12-多线程
 date: 2021-02-07 15:44:06
+icon: java
 tags: java
 categories:
 - javaSE

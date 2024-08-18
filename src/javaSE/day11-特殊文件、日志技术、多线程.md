@@ -1,6 +1,7 @@
 ---
 title: day11-特殊文件、日志技术、多线程
 date: 2021-02-07 15:43:04
+icon: java
 tags: java
 categories:
 - javaSE
