@@ -1,6 +1,6 @@
 ---
 title: 01_SpringBoot 项目集成 Prometheus
-date: 2024-06-27 17:37:54
+date: 2024-08-20 17:37:54
 tags: 监控
 categories:
 - 监控
