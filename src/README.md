@@ -3,8 +3,8 @@ home: true
 icon: home
 title: 主页
 heroImage: /logo.svg
-bgImage: https://theme-hope-assets.vuejs.press/bg/10-light.svg
-bgImageDark: https://theme-hope-assets.vuejs.press/bg/10-dark.svg
+#bgImage: https://theme-hope-assets.vuejs.press/bg/10-light.svg
+#bgImageDark: https://theme-hope-assets.vuejs.press/bg/10-dark.svg
 bgImageStyle:
   background-attachment: fixed
 heroText: FanFanの学习笔记
@@ -26,8 +26,8 @@ actions:
 highlights:      
   - header: 
 #    image: /assets/image/features.svg
-    bgImage: https://theme-hope-assets.vuejs.press/bg/10-light.svg
-    bgImageDark: https://theme-hope-assets.vuejs.press/bg/10-dark.svg
+#    bgImage: https://theme-hope-assets.vuejs.press/bg/10-light.svg
+#    bgImageDark: https://theme-hope-assets.vuejs.press/bg/10-dark.svg
     features:
       - title: Spring
         icon: /img/spring.svg

@@ -25,6 +25,7 @@ export default hopeTheme({
 
     // navbar
     navbar,
+    navbarAutoHide: 'always',
 
     navbarLayout:{
         start: ["Brand"],
@@ -52,7 +53,7 @@ export default hopeTheme({
 
     blog: {
         description: "过去无可挽回,未来可以改变",
-        intro: "/intro.html",
+        intro: "/about/me.html",
         medias: {
             // Baidu: "https://example.com",
             // BiliBili: "https://example.com",
@@ -64,7 +65,7 @@ export default hopeTheme({
             // Evernote: "https://example.com",
             // Facebook: "https://example.com",
             // Flipboard: "https://example.com",
-            // Gitee: "https://example.com",
+            Gitee: "https://gitee.com/fan-rujiang",
             GitHub: "https://github.com/fanrujiang",
             // Gitlab: "https://example.com",
             // Gmail: "mailto:info@example.com",
@@ -77,7 +78,7 @@ export default hopeTheme({
             // QQ: "https://example.com",
             // Qzone: "https://example.com",
             // Reddit: "https://example.com",
-            // Rss: "https://example.com",
+            Rss: "https://www.fanliu.top/rss.xml",
             // Steam: "https://example.com",
             // Twitter: "https://example.com",
             // Wechat: "https://example.com",
