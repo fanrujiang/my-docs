@@ -14,6 +14,7 @@ export default sidebar({
     "/art":"structure",
     "/CodeInterpretation":"structure",
     "/JavaScript":"structure",
+    "/monitor":"structure",
     "/other":"structure",
     "/about":[
         "intro",
