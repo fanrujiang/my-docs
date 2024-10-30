@@ -40,10 +40,10 @@ jobs: # 构建的任务
           TARGET: "/www/wwwroot/www.fanliu.top/dist/"
 
       # 步骤6 部署到GitHub Pages
-      - name: Deploy to GitHub Pages
-        uses: s0/git-publish-subdir-action@develop
-        env:
-          REPO: git@github.com:fanrujiang/fanrujiang.github.io.git
-          BRANCH: pages
-          FOLDER: src/.vuepress/dist/
-          SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
+      #- name: Deploy to GitHub Pages
+      #  uses: s0/git-publish-subdir-action@develop
+      #  env:
+      #    REPO: git@github.com:fanrujiang/fanrujiang.github.io.git
+      #    BRANCH: pages
+      #    FOLDER: src/.vuepress/dist/
+      #    SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
