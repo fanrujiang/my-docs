@@ -15,25 +15,6 @@ blog:
     url: https://www.fanliu.top
     repo: https://github.com/fanrujiang
     preview: assets/image/page.png
-    
-  - name: 柒柒blog
-    desc: 代码写的好不好，我DEBUG一下就知道了。
-    logo: https://thirdqq.qlogo.cn/g?b=qq&nk=2144693292&s=100
-    url: https://blog.lwgzs.cn
-    preview: assets/image/77.png
-    
-  - name: 刑辩人在路上
-    desc: 刑辩人在路上
-    logo: https://xingbianren.cn/zb_users/upload/2023/05/202305231684818873372207.png
-    url: https://xingbianren.cn
-    preview: https://xingbianren.cn/zb_users/upload/2023/06/202306021685717413207375.jpg
-    
-  - name: Viper3の小破站
-    desc: 时空是个圆圈 我们终会相见
-    logo: https://viper3-1318672778.cos.ap-beijing.myqcloud.com/user/DeftCup.jpg
-    url: https://viper3.top/
-    preview: https://viper3-1318672778.cos.ap-beijing.myqcloud.com/wallpaper/sunsetglow.jpg
-
 ---
 
 <SiteInfo
