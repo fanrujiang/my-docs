@@ -1,12 +1,10 @@
 ---
-​---
 title: 01-IDEA启动应用报错"找不到或无法加载主类"的解决方案
 date: 2024-11-14 10:27:47
 tags: 
 - debug
 categories:
 - debug
-​---
 ---
 
 
