@@ -42,6 +42,11 @@ export default navbar([
         icon: "/img/book.svg",
         children: [
             {
+                text: "踩坑日记",
+                icon: "/img/code.svg",
+                link: "/debug/"
+            },
+            {
                 text: "源码解读",
                 icon: "/img/code.svg",
                 link: "/CodeInterpretation/"

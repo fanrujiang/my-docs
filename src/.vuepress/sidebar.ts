@@ -16,6 +16,7 @@ export default sidebar({
     "/JavaScript":"structure",
     "/monitor":"structure",
     "/other":"structure",
+    "/debug":"structure",
     "/about":[
         "intro",
         "me",
