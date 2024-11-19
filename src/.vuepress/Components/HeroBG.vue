@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import { onMounted, nextTick } from 'vue';
-import { useRouter } from 'vue-router';
-import axios from 'axios';
-import { mStorage, LoadImage } from '../utils/tools';
+import { onMounted, nextTick } from "vue";
+import { useRouter } from "vue-router";
+import axios from "axios";
+import { mStorage, LoadImage } from "../utils/tools";
 
 const UpdateBingImg = () => {
   let toPath = window.location.pathname;
 
-  let nowBingImgIndex = mStorage.get('BingImgIndex');
-  const imgList = mStorage.get('BingImgList');
+  let nowBingImgIndex = mStorage.get("BingImgIndex");
+  const imgList = mStorage.get("BingImgList");
 
   if (!nowBingImgIndex || nowBingImgIndex < 0) {
     nowBingImgIndex = 0;
@@ -16,43 +16,45 @@ const UpdateBingImg = () => {
   if (nowBingImgIndex > imgList.length - 1) {
     nowBingImgIndex = imgList.length - 1;
   }
-  mStorage.set('BingImgIndex', nowBingImgIndex);
+  mStorage.set("BingImgIndex", nowBingImgIndex);
 
-  const maskElm = document.querySelector('.vp-blog-mask') as HTMLElement;
+  const maskElm = document.querySelector(".vp-blog-mask") as HTMLElement;
 
   if (nowBingImgIndex == 0) {
-    document.getElementById('leftNav')?.classList.add('disabled');
+    document.getElementById("leftNav")?.classList.add("disabled");
   }
   if (nowBingImgIndex == imgList.length - 1) {
-    document.getElementById('rightNav')?.classList.add('disabled');
+    document.getElementById("rightNav")?.classList.add("disabled");
   }
   if (nowBingImgIndex > 0 && nowBingImgIndex < imgList.length - 1) {
-    document.getElementById('leftNav')?.classList.remove('disabled');
-    document.getElementById('rightNav')?.classList.remove('disabled');
+    document.getElementById("leftNav")?.classList.remove("disabled");
+    document.getElementById("rightNav")?.classList.remove("disabled");
   }
 
   let NowData = imgList[nowBingImgIndex];
   // 区分英文版
-  if (toPath.includes('/en')) {
+  if (toPath.includes("/en")) {
     NowData = NowData.EN;
   }
 
   // 填充文案
-  const linkText = document.getElementById('bingLink_text');
+  const linkText = document.getElementById("bingLink_text");
 
   if (linkText) {
     linkText.innerHTML = NowData.Title;
   }
   // 填充链接
-  document.getElementById('bingLink')?.setAttribute('href', NowData.CopyrightLink);
+  document
+    .getElementById("bingLink")
+    ?.setAttribute("href", NowData.CopyrightLink);
 
   const bgUrl = NowData.Path;
 
   // 填充背景
-  maskElm.style.background = '';
+  maskElm.style.background = "";
   maskElm.style.backgroundImage = `url(${bgUrl})`;
 
-  const footerElm = document.querySelector('.vp-footer-wrapper') as HTMLElement;
+  const footerElm = document.querySelector(".vp-footer-wrapper") as HTMLElement;
   if (footerElm) {
     footerElm.style.backgroundImage = `url(${bgUrl})`;
   }
@@ -60,20 +62,20 @@ const UpdateBingImg = () => {
 
 // 更换背景图片
 const InsertBtn = (path?) => {
-  const maskElm = document.querySelector('.vp-blog-mask');
+  const maskElm = document.querySelector(".vp-blog-mask");
   if (!maskElm) {
     return;
   }
 
-  const imgList = mStorage.get('BingImgList');
+  const imgList = mStorage.get("BingImgList");
 
   if (imgList && imgList.length < 1) {
     return;
   }
   // 创建元素
-  if (!document.getElementById('BingSwitchWrapper')) {
-    const divElm = document.createElement('div');
-    divElm.id = 'BingSwitchWrapper';
+  if (!document.getElementById("BingSwitchWrapper")) {
+    const divElm = document.createElement("div");
+    divElm.id = "BingSwitchWrapper";
     divElm.innerHTML = `
 <a href="" target="_Blank" id="bingLink">
   <div class="bingLink_icon"><svg class="mapPin" height="16" width="16" viewBox="0 0 12 12" aria-hidden="true" role="presentation"><path d="M0 0h12v12h-12z" fill="none"></path><path d="M6.5 3a1.5 1.5 0 1 0 1.5 1.5 1.5 1.5 0 0 0-1.5-1.5zm0-3a4.5 4.5 0 0 0-4.5 4.5 5.607 5.607 0 0 0 .087.873c.453 2.892 2.951 5.579 3.706 6.334a1 1 0 0 0 1.414 0c.755-.755 3.253-3.442 3.706-6.334a5.549 5.549 0 0 0 .087-.873 4.5 4.5 0 0 0-4.5-4.5zm3.425 5.218c-.36 2.296-2.293 4.65-3.425 5.782-1.131-1.132-3.065-3.486-3.425-5.782a4.694 4.694 0 0 1-.075-.718 3.5 3.5 0 0 1 7 0 4.634 4.634 0 0 1-.075.718z"></path></svg></div>
@@ -85,8 +87,8 @@ const InsertBtn = (path?) => {
   }
   // 更新背景图片
 
-  const LeftBtn = document.getElementById('leftNav');
-  const rightBtn = document.getElementById('rightNav');
+  const LeftBtn = document.getElementById("leftNav");
+  const rightBtn = document.getElementById("rightNav");
 
   if (LeftBtn && rightBtn) {
   } else {
@@ -95,15 +97,15 @@ const InsertBtn = (path?) => {
   UpdateBingImg();
 
   LeftBtn.onclick = () => {
-    let nowBingImgIndex = mStorage.get('BingImgIndex');
+    let nowBingImgIndex = mStorage.get("BingImgIndex");
     nowBingImgIndex--;
-    mStorage.set('BingImgIndex', nowBingImgIndex);
+    mStorage.set("BingImgIndex", nowBingImgIndex);
     UpdateBingImg();
   };
   rightBtn.onclick = () => {
-    let nowBingImgIndex = mStorage.get('BingImgIndex');
+    let nowBingImgIndex = mStorage.get("BingImgIndex");
     nowBingImgIndex++;
-    mStorage.set('BingImgIndex', nowBingImgIndex);
+    mStorage.set("BingImgIndex", nowBingImgIndex);
     UpdateBingImg();
   };
 };
@@ -111,8 +113,8 @@ const InsertBtn = (path?) => {
 // 请求背景图
 const GetBingImgList = () => {
   axios({
-    method: 'get',
-    url: '//file.mo7.cc/api/public/url',
+    method: "get",
+    url: "//file.mo7.cc/api/public/url",
     params: {},
   }).then((response) => {
     const imgList = response.data.Data;
@@ -123,7 +125,7 @@ const GetBingImgList = () => {
     for (const item of imgList) {
       LoadImage(item.Path);
     }
-    mStorage.set('BingImgList', imgList);
+    mStorage.set("BingImgList", imgList);
     InsertBtn();
   });
 };
@@ -153,12 +155,12 @@ onMounted(() => {
 <style lang="scss">
 // 字体
 @font-face {
-  font-family: 'mo7_font';
-  src: url('/font/mo7_font.ttf');
+  font-family: "mo7_font";
+  src: url("/font/mo7_font.ttf");
 }
 .vp-blog-hero-title {
   font-size: 3.8rem;
-  font-family: 'mo7_font';
+  font-family: "mo7_font";
 }
 
 // 图片切换按钮
@@ -190,7 +192,7 @@ onMounted(() => {
       width: 100%;
       left: 0;
       top: 0;
-      content: '';
+      content: "";
       position: absolute;
     }
     &.disabled {
@@ -246,7 +248,7 @@ onMounted(() => {
 .vp-footer-wrapper {
   position: relative;
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     top: 0;
@@ -291,7 +293,7 @@ onMounted(() => {
   background-attachment: fixed;
 }
 
-[data-theme='light'] {
+[data-theme="light"] {
   .vp-blog-hero .vp-blog-mask::after {
     background: #000;
     opacity: 0.3 !important;
@@ -304,7 +306,7 @@ onMounted(() => {
   }
 }
 
-[data-theme='dark'] {
+[data-theme="dark"] {
   .vp-blog-hero .vp-blog-mask::after {
     background: #000;
     opacity: 0.7 !important;

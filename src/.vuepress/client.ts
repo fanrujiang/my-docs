@@ -1,5 +1,5 @@
-import {defineClientConfig} from '@vuepress/client';
-import {defineAsyncComponent} from 'vue';
+import { defineClientConfig } from '@vuepress/client';
+import { defineAsyncComponent } from 'vue';
 import 'vuepress-theme-hope/presets/bounce-icon.scss';
 import MyIcon from "./Components/MyIcon.vue";
 import BlogBg from "./Components/BlogBg.vue"; // 为页面图标添加鼠标悬停的跳动效果。
@@ -12,10 +12,10 @@ const HeroHitokoto = defineAsyncComponent(() => import('./Components/HeroHitokot
 export default defineClientConfig({
 
 
-    rootComponents: [
-        NavMusic,
-        HeroHitokoto,
-        MyIcon,
-        BlogBg,
-    ],
+  rootComponents: [
+    NavMusic,
+    HeroHitokoto,
+    MyIcon,
+    BlogBg,
+  ],
 });

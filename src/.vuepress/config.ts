@@ -1,6 +1,6 @@
 import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
-import {searchProPlugin} from "vuepress-plugin-search-pro";
+import { searchProPlugin } from "vuepress-plugin-search-pro";
 import baiduAutoPushPlugin from 'vuepress-plugin-baidu-autopush';
 
 // import { commentPlugin } from "vuepress-plugin-comment2";
