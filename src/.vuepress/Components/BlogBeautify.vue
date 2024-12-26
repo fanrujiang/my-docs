@@ -31,7 +31,7 @@
 }
 
 // 主题 白天
-[data-theme='light'] {
+[data-theme="light"] {
   .theme-container {
     .vp-page {
       .vp-blogger-info {
@@ -67,7 +67,7 @@
 }
 
 // 主题 黑夜
-[data-theme='dark'] {
+[data-theme="dark"] {
   .theme-container {
     .vp-page {
       .vp-blogger-info {
@@ -123,7 +123,7 @@ hr {
     bottom: 0;
     left: 0;
     z-index: 1;
-    content: '';
+    content: "";
     width: calc(100% - 0.25rem);
     height: 0;
     border-width: 0.125rem;
@@ -135,8 +135,8 @@ hr {
     line-height: 1.6rem;
     top: -0.4rem;
     left: 1%;
-    font-family: 'iconfont';
-    content: '\e66c';
+    font-family: "iconfont";
+    content: "\e66c";
     z-index: 2;
     font-size: 1.6rem;
     transition: 1s;

@@ -19,7 +19,7 @@ const props = defineProps({
   font-size: 1em;
 }
 
-[spin='true'] {
+[spin="true"] {
   animation: turn 5s linear infinite;
 }
 

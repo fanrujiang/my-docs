@@ -1,38 +1,38 @@
 <script setup lang="ts">
-import { onMounted, nextTick } from 'vue';
-import { useRouter } from 'vue-router';
+import { onMounted, nextTick } from "vue";
+import { useRouter } from "vue-router";
 
 const CheckScrollTopClass = () => {
-  const themeElms = document.getElementsByClassName('theme-container');
+  const themeElms = document.getElementsByClassName("theme-container");
   if (themeElms.length < 1) {
     return null;
   }
   const themeElm = themeElms[0];
 
-  const blogHeroElms = document.getElementsByClassName('vp-blog-hero');
+  const blogHeroElms = document.getElementsByClassName("vp-blog-hero");
   let blogHeroElm = null;
   if (blogHeroElms.length > 0) {
     blogHeroElm = blogHeroElms[0];
   }
 
   if (blogHeroElm) {
-    themeElm.classList.add('mo7-blog-hero');
+    themeElm.classList.add("mo7-blog-hero");
   } else {
-    themeElm.classList.remove('mo7-blog-hero');
+    themeElm.classList.remove("mo7-blog-hero");
   }
 
   const scrollTop = document.documentElement.scrollTop;
   if (scrollTop < 60) {
-    themeElm.classList.add('mo7-scroll-top');
+    themeElm.classList.add("mo7-scroll-top");
   } else {
-    themeElm.classList.remove('mo7-scroll-top');
+    themeElm.classList.remove("mo7-scroll-top");
   }
 
   if (blogHeroElm) {
     if (scrollTop < blogHeroElm.clientHeight - 30) {
-      themeElm.classList.add('mo7-scroll-blog-hero-inner');
+      themeElm.classList.add("mo7-scroll-blog-hero-inner");
     } else {
-      themeElm.classList.remove('mo7-scroll-blog-hero-inner');
+      themeElm.classList.remove("mo7-scroll-blog-hero-inner");
     }
   }
 };
@@ -41,8 +41,8 @@ onMounted(() => {
   nextTick(() => {
     CheckScrollTopClass(); // 切换时顶栏修改
 
-    window.removeEventListener('scroll', () => {});
-    window.addEventListener('scroll', () => {
+    window.removeEventListener("scroll", () => {});
+    window.addEventListener("scroll", () => {
       CheckScrollTopClass();
     });
   });
@@ -144,7 +144,7 @@ onMounted(() => {
 }
 
 // 白天
-[data-theme='light'] {
+[data-theme="light"] {
   .theme-container {
     .vp-navbar {
       backdrop-filter: blur(2px);
@@ -203,7 +203,7 @@ onMounted(() => {
 }
 
 // 黑夜细节
-[data-theme='dark'] {
+[data-theme="dark"] {
   .theme-container {
     .vp-navbar {
       backdrop-filter: blur(2px);

@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import 'aplayer/dist/APlayer.min.css';
-import MyIcon from './MyIcon.vue';
-import { useRouter } from 'vue-router';
-import { ref, onMounted, nextTick } from 'vue';
-import axios from 'axios';
+import "aplayer/dist/APlayer.min.css";
+import MyIcon from "./MyIcon.vue";
+import { useRouter } from "vue-router";
+import { ref, onMounted, nextTick } from "vue";
+import axios from "axios";
 
 let APlayer: any;
 let IsShow = ref(false);
@@ -20,27 +20,27 @@ const CloseStatus = () => {
 };
 
 const InsertMenu = () => {
-  const navCenterElm = document.querySelector('.vp-navbar-end');
+  const navCenterElm = document.querySelector(".vp-navbar-end");
 
   if (!navCenterElm) {
     return;
   }
 
-  if (!document.querySelector('#MyMusic_Menu')) {
-    const elm = document.createElement('div');
-    elm.id = 'MyMusic_Menu';
-    elm.classList.add('nav-item');
+  if (!document.querySelector("#MyMusic_Menu")) {
+    const elm = document.createElement("div");
+    elm.id = "MyMusic_Menu";
+    elm.classList.add("nav-item");
     elm.innerHTML = `<div id="MyMusic_icon" class="btnImg"></div>`; // spin="true"
     navCenterElm.appendChild(elm);
   }
 
-  const Menu = document.querySelector('#MyMusic_Menu') as HTMLElement;
+  const Menu = document.querySelector("#MyMusic_Menu") as HTMLElement;
   Menu.onclick = (event) => {
     SwitchStatus();
     event.stopPropagation();
   };
 
-  const MyMusicWrapper = document.querySelector('.MyMusic') as HTMLElement;
+  const MyMusicWrapper = document.querySelector(".MyMusic") as HTMLElement;
   MyMusicWrapper.onclick = (event) => {
     event.stopPropagation();
   };
@@ -53,7 +53,7 @@ const NewPlayer = () => {
 
   const Win: any = window;
   // 如果不存在盒子 则 终止
-  const playElm = document.getElementById('GlobalAPlayer');
+  const playElm = document.getElementById("GlobalAPlayer");
 
   if (!playElm) {
     return;
@@ -66,28 +66,28 @@ const NewPlayer = () => {
   AddBtnSpin();
 
   // 判断是否被 APlayer 接管
-  const playExist = playElm.classList.contains('aplayer');
+  const playExist = playElm.classList.contains("aplayer");
   if (playExist) {
     return;
   }
 
   Win.GlobalAPlayer = new APlayer({
-    container: document.getElementById('GlobalAPlayer'),
+    container: document.getElementById("GlobalAPlayer"),
     audio: GlobalMusicList,
     lrcType: 3,
     listFolded: false,
-    listMaxHeight: '324px',
+    listMaxHeight: "324px",
     mini: false,
     fixed: false,
     volume: 1,
-    storageName: 'GlobalAPlayer',
+    storageName: "GlobalAPlayer",
   });
 
   // 让按钮旋转
-  Win.GlobalAPlayer.on('play', function () {
+  Win.GlobalAPlayer.on("play", function () {
     AddBtnSpin();
   });
-  Win.GlobalAPlayer.on('pause', function () {
+  Win.GlobalAPlayer.on("pause", function () {
     AddBtnSpin();
   });
 };
@@ -96,9 +96,9 @@ function AddBtnSpin() {
   const Win: any = window;
   if (Win.GlobalAPlayer && Win.GlobalAPlayer.mode) {
     if (Win.GlobalAPlayer.paused) {
-      document.getElementById('MyMusic_icon')?.setAttribute('spin', 'false');
+      document.getElementById("MyMusic_icon")?.setAttribute("spin", "false");
     } else {
-      document.getElementById('MyMusic_icon')?.setAttribute('spin', 'true');
+      document.getElementById("MyMusic_icon")?.setAttribute("spin", "true");
     }
   }
 }
@@ -116,17 +116,16 @@ onMounted(() => {
   const router = useRouter();
 
   axios({
-    method: 'get',
-    url: '//file.fanliu.top/music/list.json',
+    method: "get",
+    url: "//file.fanliu.top/music/list.json",
     // url: 'https://api2.52jan.com/music/songlist?server=qqmusic&id=2702974802',
     // url: 'https://api.i-meto.com/meting/api?server=tencent&type=playlist&id=2702974802',
     params: {},
   }).then((response) => {
     var listData = response.data;
     if (listData && listData.length > 0) {
-
       listData.forEach((item) => {
-        if (item.hasOwnProperty('title')) {
+        if (item.hasOwnProperty("title")) {
           // 将键名 "title" 修改为 "name"
           item.name = item.title;
           delete item.title; // 删除原来的 "title" 键
@@ -136,7 +135,7 @@ onMounted(() => {
     }
   });
 
-  import('aplayer').then((res) => {
+  import("aplayer").then((res) => {
     nextTick(() => {
       APlayer = res.default;
       InsertMenu();
@@ -208,8 +207,8 @@ onMounted(() => {
   margin-top: -217px;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
-    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 
   transition: 0.3s;
   transform: scale(1);
@@ -261,7 +260,7 @@ onMounted(() => {
   height: 1.6rem;
   width: 1.6rem;
   .btnImg {
-    background-image: url('/img/music.svg');
+    background-image: url("/img/music.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

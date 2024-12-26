@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { ref, onMounted, nextTick } from 'vue';
-import { useRouter } from 'vue-router';
-import axios from 'axios';
-let hitokotoUrl = 'https://v1.hitokoto.cn';
+import { ref, onMounted, nextTick } from "vue";
+import { useRouter } from "vue-router";
+import axios from "axios";
+let hitokotoUrl = "https://v1.hitokoto.cn";
 // let hitokotoUrl = 'https://international.v1.hitokoto.cn'
 
 const InsertText = (data) => {
@@ -10,13 +10,13 @@ const InsertText = (data) => {
 
   clearInterval(Win.Timer);
 
-  const classElm = document.getElementsByClassName('vp-blog-hero-description');
+  const classElm = document.getElementsByClassName("vp-blog-hero-description");
   if (classElm.length > 0) {
     const textElm = classElm[0];
-    textElm.id = 'hotWord';
+    textElm.id = "hotWord";
   }
 
-  const textElm = document.getElementById('hotWord');
+  const textElm = document.getElementById("hotWord");
   if (!textElm) {
     return;
   }
@@ -31,28 +31,28 @@ const InsertText = (data) => {
   `;
 
   // 打字机效果
-  const authorElm = document.getElementById('hitokoto_author');
+  const authorElm = document.getElementById("hitokoto_author");
 
-  const hitokotoElm = document.getElementById('hitokoto_text');
+  const hitokotoElm = document.getElementById("hitokoto_text");
   if (!hitokotoElm || !authorElm) {
     return;
   }
-  authorElm.style.opacity = '0';
+  authorElm.style.opacity = "0";
 
-  const txt = data.hitokoto.split('');
+  const txt = data.hitokoto.split("");
 
   let index = 0;
   let pauseNum = 0;
   let pauseMax = 60; // 停留节奏
   let huan = false;
-  let insertTxt = '';
+  let insertTxt = "";
   Win.Timer = setInterval(() => {
     const el = txt[index];
 
     if (insertTxt.length < 4) {
-      authorElm.style.opacity = '0';
+      authorElm.style.opacity = "0";
     } else {
-      authorElm.style.opacity = '1';
+      authorElm.style.opacity = "1";
     }
 
     if (pauseNum == 0) {
@@ -101,19 +101,19 @@ const GetWord = (path?) => {
   }
 
   // if (toPath == '/' || toPath == '/en/') {
-  if (toPath == '/blog/') {
+  if (toPath == "/blog/") {
     axios({
-      method: 'get',
+      method: "get",
       url: hitokotoUrl,
       params: {},
     })
-        .then((response) => {
-          InsertText(response.data);
-        })
-        .catch((error) => {
-          hitokotoUrl = 'https://international.v1.hitokoto.cn';
-          GetWord();
-        });
+      .then((response) => {
+        InsertText(response.data);
+      })
+      .catch((error) => {
+        hitokotoUrl = "https://international.v1.hitokoto.cn";
+        GetWord();
+      });
   }
 };
 
@@ -168,7 +168,7 @@ onMounted(() => {
 }
 
 .word {
-  font-family: '华文行楷';
+  font-family: "华文行楷";
 }
 
 #hitokoto_text {
@@ -177,14 +177,14 @@ onMounted(() => {
   display: inline-block;
   font-size: 1.8rem;
   &::after {
-    content: '|';
+    content: "|";
     font-size: 1.3rem;
     animation: san 0.8s infinite;
   }
 }
 #hitokoto_author {
   transition: 0.7s;
-  font-family: 'STXingkai';
+  font-family: "STXingkai";
   font-style: italic;
   font-size: 1.2rem;
 }
