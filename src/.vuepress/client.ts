@@ -13,6 +13,8 @@ const HeroHitokoto = defineAsyncComponent(() => import("./Components/HeroHitokot
 declare global {
   interface Window {
     _hmt?: any[];
+    dataLayer?: any[];
+    gtag?: (...args: any[]) => void;
   }
 }
 
@@ -22,8 +24,8 @@ export default defineClientConfig({
 
     onMounted(() => {
       if (typeof window !== "undefined") {
+        // 百度统计
         const baiduTongjiId = "ba12f6d18a40583b3df45d23c95c7bcb";
-
         if (!window._hmt) {
           window._hmt = [];
           const hm = document.createElement("script");
@@ -32,11 +34,32 @@ export default defineClientConfig({
           document.head.appendChild(hm);
         }
 
+        // 谷歌分析
+        const googleTagId = "G-W45VECSKCH";
+        if (!window.dataLayer) {
+          window.dataLayer = [];
+        }
+        if (!window.gtag) {
+          window.gtag = function () {
+            window.dataLayer!.push(arguments);
+          };
+        }
+        window.gtag("js", new Date());
+        window.gtag("config", googleTagId);
+
+        const gtmScript = document.createElement("script");
+        gtmScript.src = `https://www.googletagmanager.com/gtag/js?id=${googleTagId}`;
+        gtmScript.async = true;
+        document.head.appendChild(gtmScript);
+
         watch(
             () => route.fullPath,
             (newPath) => {
               if (window._hmt) {
                 window._hmt.push(["_trackPageview", newPath]);
+              }
+              if (window.gtag) {
+                window.gtag("config", googleTagId, { page_path: newPath });
               }
             },
             { immediate: true } // 立即执行一次，确保首页也能上报
