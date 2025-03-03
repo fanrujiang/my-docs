@@ -13,6 +13,14 @@ categories:
 
 ## docker安装MySQL_全网最佳教程
 
+### 0. Linux centos版本 懒人一键部署脚本
+
+新服务器中 直接在 shell命令框中 复制并运行以下脚本 即可一键部署
+
+```sh
+wget https://file.fanliu.top/mysql/install_docker_mysql.sh -O install_docker_mysql.sh && chmod +x install_docker_mysql.sh && ./install_docker_mysql.sh
+```
+
 此教程适合用于企业项目中的 MySQL，配置注释详细全面，并准备了一键安装的脚本
 
 ### 1. 使用命令拉取mysql
