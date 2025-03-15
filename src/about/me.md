@@ -115,7 +115,7 @@ Blog: https://www.fanliu.top/
 ```yml
 qq: 1066643487
 vx: fan1066643487（加我请留下备注，无备注不会审核通过哈，望理解）
-email: 1066643487@qq.com
+email: fanfan.fanliu.top
 motto: 古今之成大事者，不惟有超世之才，亦必有坚忍不拔之志。
 ```
 
